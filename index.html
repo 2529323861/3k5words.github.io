@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>高中3k5单词查漏</title>
+        <html lang="zh-CN">
+        <meta charset="utf-8">
+        <script src="datebase.js"></script>
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#main").hide();
+                $("#answerbox").hide();
+                $("#main").fadeIn(500);
+                $("#extract").click(function(){
+                    var nowwords = wordsbase[getOptions()].slice();
+                    var nowmean = meanbase[getOptions()].slice();
+                    var theindex = Math.floor(Math.random()*(nowwords.length));
+                    document.getElementById("text").innerHTML = nowwords[theindex];
+                    document.getElementById("answer").innerHTML = nowmean[theindex];
+                    $("#answerbox").hide();
+                });
+                $("#show").click(function(){
+                    $("#answerbox").show();
+                });
+            });
+            function getOptions(){
+                var myselect = document.getElementById("initial");
+                var myoptions = myselect.selectedIndex;
+                var val = myselect.options[myoptions].value;
+                return val;
+            };
+        </script>
+        <style>
+            #main{
+                margin: auto;
+                width: 750px;
+                height: 1334px;
+                border: 5px solid rgb(105, 178, 237);
+                box-shadow: 10px 10px 3px #aaaaaa;
+                border-radius: 20px;
+            }
+            #text{
+                font-size: 100px;
+            }
+            #textbox{
+                margin: 0 auto;
+                text-align: center;
+            }
+            button{
+                width: 300px;
+                padding: 8px;
+                background-color: #428bca;
+                border-color: #357ebd;
+                color: #fff;
+                border-radius: 10px;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid transparent;
+                font-weight: 900;
+                font-size: 300%
+            }
+            #extractbox_p1{
+                display: flex;
+                justify-content: space-evenly;
+                width: 750px;
+                height: 100px;
+            }
+            #initialbox{
+                margin: 0 auto;
+                width: 700px;
+                height: 50px;
+            }
+            #textbox_p1{
+                margin: 0 auto;
+                width: auto;
+                height: 1184px;
+            }
+            #initial{
+                width: 700px;
+                height: 50px;
+            }
+            #answerbox{
+                margin: 0 auto;
+                text-align: center;
+            }
+            #answer{
+                font-size: 50px;
+            }
+            p{
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div style="height: 5px;"></div>
+            <div id="textbox_p1">
+                <div id="initialbox">
+                    <select id="initial">
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                        <option value="e">E</option>
+                        <option value="f">F</option>
+                        <option value="g">G</option>
+                        <option value="h">H</option>
+                        <option value="i">I</option>
+                        <option value="j">J</option>
+                        <option value="k">K</option>
+                        <option value="l">I</option>
+                        <option value="m">M</option>
+                        <option value="n">E</option>
+                        <option value="o">O</option>
+                        <option value="p">P</option>
+                        <option value="q">Q</option>
+                        <option value="r">R</option>
+                        <option value="s">S</option>
+                        <option value="t">T</option>
+                        <option value="u">U</option>
+                        <option value="v">V</option>
+                        <option value="w">W</option>
+                        <option value="x">X</option>
+                        <option value="y">Y</option>
+                        <option value="z">Z</option>
+                    </select>
+                </div>
+                <div id="textbox">
+                    <p id="text">click the “extract”</p>
+                </div>
+                <div id="answerbox">
+                    <p id="answer">NULL</p>
+                </div>
+            </div>
+            <div id="extractbox_p1">
+                    <button id="extract">extract</button>
+                    <button id="show">show</button>             
+            </div>
+        </div>
+    </body>
+</html>
