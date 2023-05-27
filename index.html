@@ -58,8 +58,6 @@
                 text-align: center;
                 vertical-align: middle;
                 border: 1px solid transparent;
-                font-weight: 900;
-                font-size: 300;
             }
             #extractbox_p1{
                 display: flex;
@@ -81,6 +79,7 @@
                 margin: 0 auto;
                 width: calc((100vh - 30px) * 0.524);
                 height: calc((100vh - 30px) * 0.0374);
+                font-size: calc((100vh - 30px) * 0.0349);
             }
             #answerbox{
                 margin: 0 auto;
@@ -94,6 +93,12 @@
             }
             body{
                 background-color: #fff;
+            }
+            .extract{
+                margin: 0 auto;
+                text-align: center;
+                font-size: calc((100vh - 30px) * 0.0449);
+                font-weight: 900;
             }
         </style>
     </head>
@@ -139,8 +144,12 @@
                 </div>
             </div>
             <div id="extractbox_p1">
-                    <button id="extract">extract</button>
-                    <button id="show">show</button>             
+                    <button id="extract">
+                        <p class="extract">extract</p>
+                    </button>
+                    <button id="show">
+                        <p class="extract">show</p>
+                    </button>             
             </div>
         </div>
     </body>
