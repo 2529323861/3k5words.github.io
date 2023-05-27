@@ -4,6 +4,7 @@
         <title>高中3k5单词查漏</title>
         <html lang="zh-CN">
         <meta charset="utf-8">
+        <link rel="shortcut icon" href="ico.png">
         <script src="datebase.js"></script>
         <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>
@@ -33,58 +34,60 @@
         <style>
             #main{
                 margin: auto;
-                width: 750px;
-                height: 1334px;
-                border: 5px solid rgb(105, 178, 237);
-                box-shadow: 10px 10px 3px #aaaaaa;
-                border-radius: 20px;
+                width: calc((100vh - 30px) * 0.562);
+                height: calc(100vh - 30px);
+                border: calc((100vh - 30px) * 0.0037) solid rgb(105, 178, 237);
+                box-shadow: calc((100vh - 30px) * 0.00749) calc((100vh - 30px) * 0.00749) calc((100vh - 30px) * 0.00224) #aaaaaa;
+                border-radius: calc((100vh - 30px) * 0.0149);
+                background-color: #fff;
             }
             #text{
-                font-size: 100px;
+                font-size: calc((100vh - 30px) * 0.0749);
             }
             #textbox{
                 margin: 0 auto;
                 text-align: center;
             }
             button{
-                width: 300px;
-                padding: 8px;
+                width: calc((100vh - 30px) * 0.224);
+                padding: calc((100vh - 30px) * 0.00599);
                 background-color: #428bca;
                 border-color: #357ebd;
                 color: #fff;
-                border-radius: 10px;
+                border-radius: calc((100vh - 30px) * 0.00749);
                 text-align: center;
                 vertical-align: middle;
                 border: 1px solid transparent;
                 font-weight: 900;
-                font-size: 300%
+                font-size: 300;
             }
             #extractbox_p1{
                 display: flex;
                 justify-content: space-evenly;
-                width: 750px;
-                height: 100px;
+                width: calc((100vh - 30px) * 0.562);
+                height: calc((100vh - 30px) * 0.0749);
             }
             #initialbox{
                 margin: 0 auto;
-                width: 700px;
-                height: 50px;
+                width: calc((100vh - 30px) * 0.524);
+                height: calc((100vh - 30px) * 0.0374);
             }
             #textbox_p1{
                 margin: 0 auto;
                 width: auto;
-                height: 1184px;
+                height: calc((100vh - 30px) * 0.887);
             }
             #initial{
-                width: 700px;
-                height: 50px;
+                margin: 0 auto;
+                width: calc((100vh - 30px) * 0.524);
+                height: calc((100vh - 30px) * 0.0374);
             }
             #answerbox{
                 margin: 0 auto;
                 text-align: center;
             }
             #answer{
-                font-size: 50px;
+                font-size: calc((100vh - 30px) * 0.0374);
             }
             p{
                 user-select: none;
@@ -96,7 +99,7 @@
     </head>
     <body>
         <div id="main">
-            <div style="height: 5px;"></div>
+            <div style="height: calc((100vh - 30px) * 0.00374);"></div>
             <div id="textbox_p1">
                 <div id="initialbox">
                     <select id="initial">
